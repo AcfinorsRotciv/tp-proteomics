@@ -165,34 +165,42 @@ df = pandas.read_csv()
 
 Quel est le type de l'objet `df`?
 ```
-
+df est de class 'pandas.core.frame.DataFrame'
 ```
 
 ##### Descriptions d'une table de données
 Que permettent les méthodes suivantes?
 ###### df.shape
 ```
+cette méthode renvoie un tuple contenant les dimensions du df
 ```
 ###### df.head()
 ```
+cette méthode retourne les n premières lignes du tableau
 ```
 ###### df.tail()
 ```
+cette méthode retourne les n dernières lignes
 ```
 ###### df.columns
 ```
+permet d'acceder à l'objet nom de colonne du tableau
 ```
 ###### df.dtypes
 ```
+renvoie le type des données contenues dans le tableau
 ```
 ###### df.info
 ```
+renvoie un summary du tableau
 ```
 ###### df.describe()
 ```
+geneère des statistiques descriptives
 ```
 ###### df.dropna()
 ```
+Remove missing values.
 ```
 
 ##### Accès aux éléments d'une table de données
@@ -203,6 +211,10 @@ values = df[['Description', 'Gene Symbol']]
 
 Quel est le type de `values` ?
 
+```
+class 'pandas.core.frame.DataFrame'
+```
+
 Verifiez si certaines méthodes de `DataFrame` lui sont applicables.
 Ce type supporte l'accès par indice et les slice `[a:b]`
 
@@ -212,12 +224,12 @@ On peut accéder aux valeurs du DataFrame via des indices ou plages d'indice. La
 Il y a différentes manières de le faire, l'utilisation de `.iloc[slice_ligne,slice_colonne]` constitue une des solutions les plus simples. N'oublions pas que shape permet d'obtenir les dimensions (lignes et colonnes) du DataFrame.
 ###### Acceder aux cinq premières lignes de toutes les colonnes
 ```python
-
+df.head()
 ```
 
 ###### Acceder à toutes les lignes de la dernière colonne
 ```python
-
+df.tail()
 ```
 
 ###### Acceder aux cinq premières lignes des colonnes 0, 2 et 3
